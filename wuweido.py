@@ -3,6 +3,7 @@
 from Tkinter import *
 import tkMessageBox, tkSimpleDialog
 from wwd import ToDoList, VERSION
+import os
 
 """
 Tk-based GUI for WuWeiDo
@@ -14,9 +15,11 @@ class Application(Frame):
     def __init__(self, master=None):
         self.td = ToDoList()
         Frame.__init__(self, master)
-        self.taijitu_img = PhotoImage(file="wwd.png")
+        taijitu_img_name = os.path.join(self.td.BASE_DIR, "wwd.png")
+        self.taijitu_img = PhotoImage(file=taijitu_img_name)
         self.master.tk.call("wm", "iconphoto", root._w, self.taijitu_img)
-        self.split_img = PhotoImage(file="flow.png")
+        split_img_name = os.path.join(self.td.BASE_DIR, "flow.png")
+        self.split_img = PhotoImage(file=split_img_name)
         self.pack()
         self.createWidgets()
 
