@@ -15,11 +15,9 @@ class Application(Frame):
     def __init__(self, master=None):
         self.td = ToDoList()
         Frame.__init__(self, master)
-        taijitu_img_name = os.path.join(self.td.BASE_DIR, "wwd.png")
-        self.taijitu_img = PhotoImage(file=taijitu_img_name)
+        self.taijitu_img = PhotoImage(file="wwd.gif")
         self.master.tk.call("wm", "iconphoto", root._w, self.taijitu_img)
-        split_img_name = os.path.join(self.td.BASE_DIR, "flow.png")
-        self.split_img = PhotoImage(file=split_img_name)
+        self.split_img = PhotoImage(file="flow.gif")
         self.pack()
         self.createWidgets()
 

@@ -9,7 +9,7 @@ WuWeiDo - a Taoist to-do list
 Author: Paweł Piątkowski
 """
 
-VERSION = "0.0.3"
+VERSION = "0.0.4"
 
 
 class ToDoList(object):
